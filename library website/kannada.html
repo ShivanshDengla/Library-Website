@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>NAB LIBRARY</title>    
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        h1{
+            color: blue;
+        }
+        
+        #back{
+           font-size: 30px; 
+            border: solid;
+            border-color: yellow;
+            padding: 0px;
+            background-color: red;
+            text-decoration: none;
+            border-style: ridge;
+            width: 200px;
+            
+        }
+    
+        
+        
+        #subcategory{
+            background-color: black;
+            border-top-color: aqua;
+            border-top-style: solid;
+            border-left-color: aqua;
+            border-left-style: solid;
+            border-right-color: aqua;
+            border-right-style: solid;
+            background-color: #1a1a1a;
+        }
+        
+        input{
+            margin-top: 5px;
+        }
+        
+        
+    </style>
+   <meta name=”viewport” content=”width=device-width, initial-scale=1″> 
+</head>
+
+
+<body>
+        
+   <form action="index.html">
+    <input type="submit" value="Go To Library" />
+</form><br>
+  
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for books...">
+
+
+    
+        
+        <h1><br>Kannada Books<br></h1>
+    
+            
+    
+    
+        
+            <p>A.NO.
+                &ensp;--&ensp;&ensp;Title&emsp;-&emsp;Author
+            </p>
+            
+            
+            
+            <ul id="myUL">
+                
+            <li><br><a href="feedback_form.html"><strong>K-1</strong> &ensp;--&ensp; Lal Bahadur Shastri - By Unknown</a></li>
+            
+            <li><br><a href="feedback_form.html"><strong>K2</strong>  &ensp;--&ensp; Kattalalli Bandavalu	- By Beechi </a></li>
+                    
+            <li><br><a href="feedback_form.html"><strong>K3</strong>  &ensp;--&ensp; Abhiman - By A.N. Krishnarao </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K4</strong>  &ensp;--&ensp; Aakaash Banagalu 	 - By 	Yashodhara Bhat </a></li>
+            
+            <li><br><a href="feedback_form.html"><strong>K5</strong>  &ensp;--&ensp; Nargund Bandaya	 - By 	Basavaraj Kattimani </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K6</strong>  &ensp;--&ensp; Hu Vu Hanu	 - By	Triveni </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K7</strong>  &ensp;--&ensp; Sandhyaa Raag	 - By	Krishna Rao </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K8</strong>  &ensp;--&ensp; Iraavati     	 - By	Korati Shriniwasa Rao  </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K9</strong>  &ensp;--&ensp; Devara Gombe	 - By	K. Saroja Rao </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K10</strong>  &ensp;--&ensp; Maanikkya 	 - By 	Neeladevi </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K11</strong>  &ensp;--&ensp; Sunnandooge Enante	 - By 	Beechee </a></li>
+                
+            <li><br><a href="feedback_form.html"><strong>K12</strong>  &ensp;--&ensp; Chellave	 - By	M. K. Puranik </a></li>
+                
+             <li><br><a href="feedback_form.html"><strong>K13</strong>  &ensp;--&ensp; Deva	 - By	A.P. Malathi </a></li>
+                
+                
+                
+              
+        </ul>
+    
+    <br>
+    <div id="back">
+    <a href="index.html">Back to Library</a>
+    </div>
+        
+                <script>
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+            
+        }
+    }
+}
+</script>
+        
+</body>
+    
+</html>
